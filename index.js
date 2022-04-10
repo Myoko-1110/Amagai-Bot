@@ -4,20 +4,20 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 client.on ('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`)
 });
-var Switch = 0;
+var Switch = 0; //関数"Switch"に0を設定
 
 client.on ('messageCreate', (message) => {
     if (message.content === '!ping') {
-        message.reply('pong!');
+        message.reply('pong!'); //メッセージが"!ping"だったら返信
     }
 })
 
 client.on ('messageCreate', (message) => {
     if (message.author.bot) return;
-    if (Switch === 1) return;
-    if (message.content === 'a!on') return;
-    if (message.content === 'a!off') return;
-    if (message.content === '!ping') return;
+    if (Switch === 1) return; //関数"Switch"が1だったら返信をしない
+    if (message.content === 'a!on') return; //メッセージが"a!on"だったら返信をしない
+    if (message.content === 'a!off') return; //メッセージが"a!off"だったら返信をしない
+    if (message.content === '!ping') return; //メッセージが"!ping"だったら返信をしない
     let arr = ["なんでぇ！？", "確証が欲しいの確証が！！", "らぁくしょうらぁくしょう！", "うるさいんですけどぉーーー", "さようなら", "よろしくおねがいまーth", "俺もだよ❤", "お前また授業中うるさくしただろ", "天谷ですけどぉぉぉ！！！！！wwwwwwwwwww"];
     var random = Math.floor(Math.random() * arr.length);
     var result = arr[random];
@@ -30,11 +30,11 @@ client.on ('messageCreate', (message) => {
 client.on ('messageCreate', (message) => {
     if (message.content === 'a!on') {
         if (Switch === 0) {
-            message.reply('すでにオンです。');
+            message.reply('すでにオンです。'); //関数"Switch"が0だったら"すでにオンです。"を返信
         }
         else {
             Switch = 0;
-            message.reply('メッセージ返信をオンにしました。');
+            message.reply('メッセージ返信をオンにしました。'); //該当しない場合は関数"Switch"を"0"に設定
         }
     }
 });
@@ -42,11 +42,11 @@ client.on ('messageCreate', (message) => {
 client.on ('messageCreate', (message) => {
     if (message.content === 'a!off') {
         if (Switch === 1) {
-            message.reply('すでにオフです。');
+            message.reply('すでにオフです。'); //関数"Switch"が"1"だったら"すでにオンです。"を返信
         }
         else {
             Switch = 1;
-            message.reply('メッセージ返信をオフにしました。');
+            message.reply('メッセージ返信をオフにしました。'); //該当しない場合は関数"Switch"を"1"に設定
         }
     }
 });
