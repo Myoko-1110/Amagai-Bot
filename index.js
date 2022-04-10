@@ -14,7 +14,7 @@ client.on ('messageCreate', (message) => {
 
 client.on ('messageCreate', (message) => {
   if (message.author.bot) return;
-    let arr = ["なんでぇ！？", "確証が欲しいの確証が！！", "らぁくしょうらぁくしょう！", "うるさいんですけどぉーーー", "さようなら", "よろしくおねがいまーth", "俺もだよ❤", "お前また授業中うるさくしただろ"];
+    let arr = ["なんでぇ！？", "確証が欲しいの確証が！！", "らぁくしょうらぁくしょう！", "うるさいんですけどぉーーー", "さようなら", "よろしくおねがいまーth", "俺もだよ❤", "お前また授業中うるさくしただろ”, "天谷ですけどぉぉぉ！！！！！wwwwwwwwwww"];
     var random = Math.floor(Math.random() * arr.length);
     var result = arr[random];
     message.channel.send(result);
