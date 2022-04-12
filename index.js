@@ -1,10 +1,12 @@
 const { Client, Intents } = require('discord.js')
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] })
+const msg = require('./msg.js');
+client.msg = msg;
 
 client.on ('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`)
 });
-var Switch = 0; //関数"Switch"に0を設定
+let Switch = 0; //関数"Switch"に0を設定
 
 client.on ('messageCreate', (message) => {
     if (message.content === '!ping') {
@@ -18,7 +20,48 @@ client.on ('messageCreate', (message) => {
     if (message.content === 'a!on') return; //メッセージが"a!on"だったら返信をしない
     if (message.content === 'a!off') return; //メッセージが"a!off"だったら返信をしない
     if (message.content === '!ping') return; //メッセージが"!ping"だったら返信をしない
-    let arr = ["なんでぇ！？", "確証が欲しいの確証が！！", "らぁくしょうらぁくしょう！", "うるさいんですけどぉーーー", "さようなら", "よろしくおねがいまーth", "俺もだよ❤", "お前また授業中うるさくしただろ", "天谷ですけどぉぉぉ！！！！！wwwwwwwwwww", "それ本当に実行できんの？", "うるせぇなぁ", "お前常習犯だろ？", "チッ", "家に忘れたじゃないよ！", "このクラスの平均点が一番低いの!", "いったかんな、いいな？いいな？", "みんな聞いたかんな？"]
+    let arr = [
+        //ここからメッセージ
+
+        "なんでぇ！？",
+        "確証が欲しいの確証が！！",
+        "らぁくしょうらぁくしょう！",
+        "うるさいんですけどぉーーー",
+        "さようなら",
+        "よろしくおねがいまーth",
+        "俺もだよ❤",
+        "お前また授業中うるさくしただろ",
+        "天谷ですけどぉぉぉ！！！！！wwwwwwwwwww",
+        "それ本当に実行できんの？",
+        "お前常習犯だろ？",
+        "チッ",
+        "家に忘れたじゃないよ！",
+        "このクラスの平均点が一番低いの!",
+        "いったかんな、いいな？いいな？",
+        "みんな聞いたかんな？",
+        "な～いすぅ",
+        "もう！ほんとに！",
+        "一回だけ言うからな？",
+        "もうフルボッコよ",
+        "やばくねえ!?",
+        "動物園へお帰り下さい",
+        "飼育員さんのもとへお戻りください",
+        "気持ち切り替えて",
+        "ほんとに頼むよぉ…",
+        "社会に出たらもうそれ通用しないよ？",
+        "いつだすの？",
+        "それ本当に実行できんの？",
+        "ええっ!?",
+        "https://github.com/Myoko-1110/Amagai-Bot/blob/main/voice/1.mp3?raw=true",
+        "https://github.com/Myoko-1110/Amagai-Bot/blob/main/voice/2.mp3?raw=true",
+        "https://github.com/Myoko-1110/Amagai-Bot/blob/main/voice/3.mp3?raw=true",
+        "https://github.com/Myoko-1110/Amagai-Bot/blob/main/voice/4.mp3?raw=true",
+        "https://github.com/Myoko-1110/Amagai-Bot/blob/main/voice/5.mp3?raw=true",
+        "https://github.com/Myoko-1110/Amagai-Bot/blob/main/voice/6.mp3?raw=true"
+
+
+        //ここで終わり
+    ]
     var random = Math.floor(Math.random() * arr.length);
     var result = arr[random];
     message.channel.send(result);
