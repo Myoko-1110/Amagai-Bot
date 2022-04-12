@@ -18,7 +18,7 @@ client.on ('messageCreate', (message) => {
     if (message.content === 'a!on') return; //メッセージが"a!on"だったら返信をしない
     if (message.content === 'a!off') return; //メッセージが"a!off"だったら返信をしない
     if (message.content === '!ping') return; //メッセージが"!ping"だったら返信をしない
-    let arr = ["なんでぇ！？", "確証が欲しいの確証が！！", "らぁくしょうらぁくしょう！", "うるさいんですけどぉーーー", "さようなら", "よろしくおねがいまーth", "俺もだよ❤", "お前また授業中うるさくしただろ", "天谷ですけどぉぉぉ！！！！！wwwwwwwwwww"];
+    let arr = ["なんでぇ！？", "確証が欲しいの確証が！！", "らぁくしょうらぁくしょう！", "うるさいんですけどぉーーー", "さようなら", "よろしくおねがいまーth", "俺もだよ❤", "お前また授業中うるさくしただろ", "天谷ですけどぉぉぉ！！！！！wwwwwwwwwww", "それ本当に実行できんの？", "うるせぇなぁ", "お前常習犯だろ？", "チッ", "家に忘れたじゃないよ！", "このクラスの平均点が一番低いの!", "いったかんな、いいな？いいな？", "みんな聞いたかんな？"]
     var random = Math.floor(Math.random() * arr.length);
     var result = arr[random];
     message.channel.send(result);
