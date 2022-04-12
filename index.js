@@ -4,22 +4,22 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 client.on ('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`)
 });
+
 let Switch = 0; //関数"Switch"に0を設定
 
 client.on ('messageCreate', (message) => {
     if (message.content === '!ping') {
         message.reply('pong!'); //メッセージが"!ping"だったら返信
     }
-})
 
-client.on ('messageCreate', (message) => {
+
     if (message.author.bot) return;
     if (Switch === 1) return; //関数"Switch"が1だったら返信をしない
     if (message.content === 'a!on') return; //メッセージが"a!on"だったら返信をしない
     if (message.content === 'a!off') return; //メッセージが"a!off"だったら返信をしない
     if (message.content === '!ping') return; //メッセージが"!ping"だったら返信をしない
     let arr = [
-        //ここからメッセージ
+        //ここからランダムで送るメッセージ
 
         "なんでぇ！？",
         "確証が欲しいの確証が！！",
@@ -50,20 +50,19 @@ client.on ('messageCreate', (message) => {
         "いつだすの？",
         "それ本当に実行できんの？",
         "ええっ!?",
-        "https://github.com/Myoko-1110/Amagai-Bot/blob/main/voice/1.mp3?raw=true",
-        "https://github.com/Myoko-1110/Amagai-Bot/blob/main/voice/2.mp3?raw=true",
-        "https://github.com/Myoko-1110/Amagai-Bot/blob/main/voice/3.mp3?raw=true",
-        "https://github.com/Myoko-1110/Amagai-Bot/blob/main/voice/4.mp3?raw=true",
-        "https://github.com/Myoko-1110/Amagai-Bot/blob/main/voice/5.mp3?raw=true",
-        "https://github.com/Myoko-1110/Amagai-Bot/blob/main/voice/6.mp3?raw=true"
-
+        {files: ['voice/なんでぇ？.mp3']},
+        {files: ['voice/うるさいんですけどー.mp3']},
+        {files: ['voice/らくしょうらくしょう.mp3']},
+        {files: ['voice/動物園うるせぇ.mp3']},
+        {files: ['voice/いったかんな？.mp3']},
+        {files: ['voice/確証がほしいの確証が.mp3']}
 
         //ここで終わり
     ]
-    var random = Math.floor(Math.random() * arr.length);
-    var result = arr[random];
+    let random = Math.floor(Math.random() * arr.length);
+    let result = arr[random];
     message.channel.send(result);
-});
+})
 
 //　↑こんな感じで "文字1", "文字2" ってやってください
 //　文字は"でくくって、文字と文字の間はカンマとスペースを忘れずに付けてください。
@@ -93,4 +92,4 @@ client.on ('messageCreate', (message) => {
 });
 
 
-client.login ("OTU4MzExOTQ3Mzc0MzA5Mzc2.YkLfjA.hxnE4DRvIOLLaQReojj9LbwlQcc");
+client.login("OTU4MzExOTQ3Mzc0MzA5Mzc2.YkLfjA.hxnE4DRvIOLLaQReojj9LbwlQcc");
