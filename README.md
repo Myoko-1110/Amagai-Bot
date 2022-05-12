@@ -33,5 +33,5 @@ node index.js
 ##
 Created by Myoko
 Supported by Kayuun
-Invite : https://discord.com/api/oauth2/authorize?client_id=958311947374309376&permissions=8&scope=bot
+Invite : [ここをクリック](https://discord.com/api/oauth2/authorize?client_id=958311947374309376&permissions=8&scope=bot)
 ※自鯖に入れる場合は自己責任でお願いします。
