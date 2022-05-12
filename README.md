@@ -5,6 +5,7 @@
 
 ## インストール
 [Node js V13.0+](https://nodejs.org/)をインストールする必要があります。
+##
 linuxの場合
 ``````bash
 git clone https://github.com/MyokoJP/Amagai-Bot
