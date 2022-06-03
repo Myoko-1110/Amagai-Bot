@@ -15,9 +15,9 @@ npm install
 ``````
 windowsの場合
 ``````bash
-ソースコードをダウンロードします。
+git clone https://github.com/MyokoJP/Amagai-Bot
 Win ＋ Rでコマンドプロントを開きます。
-ダウンロードした場所にcdで移動します。
+cd ダウンロード場所
 npm install
 ``````
 
@@ -29,7 +29,7 @@ node index.js
 ``````
 windowsの場合
 ``````bash
-cd {ダウンロードした場所}
+cd ダウンロード場所
 node index.js
 ``````
 ##
