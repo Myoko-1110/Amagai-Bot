@@ -33,7 +33,15 @@ client.on ('messageCreate', (message) => {
             message.reply('メッセージ返信機能をオンにしました。'); //該当しない場合は関数"Switch"を"on"に設定
         }
     }
-
+    if (massage.content === `${prefix}exit`) {
+        if (member.roles.cache.has !== '940508135846727791') {
+            massage.replay('あなたにはこのBotを再起動する権限がありません')
+        }
+        else {
+            massage.replay('Botを停止します。少々お待ちください…')
+            await process.exit();
+        }
+    }
     if (message.author.bot) return;
     if (Switch === "off") return; //関数"Switch"が1だったら返信をしない
     if (message.content === `${prefix}on`) return;
