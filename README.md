@@ -2,7 +2,7 @@
 ## このBotについて
 - このBotは「天谷bot作ろうぜwww」のような感じのノリで作ったものです。
 - 指定した文字をランダムに送信する機能や、返信機能のオンオフ機能があります。
-- すべてをindex.jsに詰め込んでいます
+- すべてを[index.js](https://github.com/MyokoJP/Amagai-Bot/blob/main/index.js)に詰め込んでいます
 
 ## インストール
 [Node js V13.0+](https://nodejs.org/)をインストールする必要があります。
