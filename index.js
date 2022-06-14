@@ -94,6 +94,8 @@ client.on ('messageCreate', (message) => {
         "私をbotにして遊ばないでください",
         "でもそれってあなたの感想ですよね？",
         "I love you!",
+        "いーですか？at that time と thenは同じ意味だからね？"
+        "私,APEXでpredetor行ってるからね!?",
         {files: ['voice/なんでぇ？.mp3']},
         {files: ['voice/うるさいんですけどー.mp3']},
         {files: ['voice/らくしょうらくしょう.mp3']},
