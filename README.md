@@ -33,7 +33,6 @@ cd ダウンロード場所
 node index.js
 ``````
 ##
-Created by Myoko
-######
+Created by Myoko<br/>
 Supported by Kayuun
 
