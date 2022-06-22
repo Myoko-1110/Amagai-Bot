@@ -120,6 +120,5 @@ client.on ('messageCreate', (message) => {
 
 
 
-client.login("OTU4MzExOTQ3Mzc0MzA5Mzc2.YkLfjA.hxnE4DRvIOLLaQReojj9LbwlQcc");
+client.login("YOURTOKEN");
 
-//client.login("OTYwODgwNTk4MzY3NDczNzQ3.Ykw3yg.sA8wyrHYtncwSq6E-cBa3Ylw4Os");
